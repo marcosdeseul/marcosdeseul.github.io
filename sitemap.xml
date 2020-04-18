@@ -3,15 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cloud.marcokwak.com/</loc>
+    <lastmod>2020-04-17T17:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/posts/my-first-post/</loc>
+    <lastmod>2020-04-17T17:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/posts/</loc>
+    <lastmod>2020-04-17T17:24:17+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cloud.marcokwak.com/about/</loc>
   </url>
   
   <url>
     <loc>https://cloud.marcokwak.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://cloud.marcokwak.com/</loc>
   </url>
   
   <url>
