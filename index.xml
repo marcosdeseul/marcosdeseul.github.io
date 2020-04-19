@@ -12,25 +12,24 @@
     
     
     <item>
-      <title>My first post</title>
-      <link>https://cloud.marcokwak.com/posts/my-first-post/</link>
+      <title>Why do I start this blog?</title>
+      <link>https://cloud.marcokwak.com/posts/why-do-i-start-this-blog/</link>
       <pubDate>Fri, 17 Apr 2020 17:24:17 +0800</pubDate>
       
-      <guid>https://cloud.marcokwak.com/posts/my-first-post/</guid>
-      <description></description>
+      <guid>https://cloud.marcokwak.com/posts/why-do-i-start-this-blog/</guid>
+      <description>I have been writing articles in my Korean blog for a while and even I published a book thanks to the blog. But I always wanted to start writing more technical stuffs in English to meet more audience all over the world. My decison finally came into action.</description>
     </item>
     
     <item>
-      <title>About Hugo</title>
+      <title>About Marco</title>
       <link>https://cloud.marcokwak.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cloud.marcokwak.com/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan. Coded in Vim using spf13-vim  Have questions or suggestions?</description>
+      <description>A solutions and software engineer, currently working for VMware.
+I am into Cloud technologies, especially Hybrid Cloud and DevOps:
+ Hybrid Cloud &amp;amp; Multi Cloud Kubernetes CI/CD  Passionate About Business and Numbers I have run a couple of businesses when working as a software engineer for 6+ years.
+ Online Coding Education Platform IT Consulting  And this is why I decided to become a solutions engineer. I always wanted to have a wider view of business, but as a software engineer, I always felt the chance was very limited.</description>
     </item>
     
   </channel>
