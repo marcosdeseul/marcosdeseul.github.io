@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2020 20:05:50 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cloud</title>
+      <link>https://cloud.marcokwak.com/tags/cloud/</link>
+      <pubDate>Sun, 26 Apr 2020 20:05:50 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>datacenter</title>
+      <link>https://cloud.marcokwak.com/tags/datacenter/</link>
+      <pubDate>Sun, 26 Apr 2020 20:05:50 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/tags/datacenter/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

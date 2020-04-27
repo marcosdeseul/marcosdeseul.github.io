@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Marco Kwak</title>
-    <link>https://cloud.marcokwak.com/posts/</link>
-    <description>Recent content in Posts on Marco Kwak</description>
+    <title>cloud on Marco Kwak</title>
+    <link>https://cloud.marcokwak.com/tags/cloud/</link>
+    <description>Recent content in cloud on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 Apr 2020 20:05:50 +0800</lastBuildDate>
     
-	<atom:link href="https://cloud.marcokwak.com/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cloud.marcokwak.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <description>What is a Computer? We all know what a computer is, but at the same time most of us do not know what a computer is. We just use computers on a daily basis and know how to use it. But it is not easy to say that we know how it works.
 A computer consists of CPU(s), RAM(s), Storage(s), Network device(s).
 CPUs are for calculation. For example, if you open up an MS Excel file and run some functions in it, then your file requests CPU resource to perform the task.</description>
-    </item>
-    
-    <item>
-      <title>Why do I start this blog?</title>
-      <link>https://cloud.marcokwak.com/posts/why-do-i-start-this-blog/</link>
-      <pubDate>Mon, 20 Apr 2020 06:57:00 +0800</pubDate>
-      
-      <guid>https://cloud.marcokwak.com/posts/why-do-i-start-this-blog/</guid>
-      <description>I have been writing articles in my Korean blog for a while and even my first book was published thanks to the blog. But I always wanted to start writing more technical stuffs in English to meet more audience from all over the world. My decision finally came into action.</description>
     </item>
     
   </channel>

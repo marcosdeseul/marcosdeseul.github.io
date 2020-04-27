@@ -6,10 +6,21 @@
     <description>Recent content on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Apr 2020 06:57:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 20:05:50 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Era of Cloud Computing</title>
+      <link>https://cloud.marcokwak.com/posts/the-era-of-cloud-computing/</link>
+      <pubDate>Sun, 26 Apr 2020 20:05:50 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/posts/the-era-of-cloud-computing/</guid>
+      <description>What is a Computer? We all know what a computer is, but at the same time most of us do not know what a computer is. We just use computers on a daily basis and know how to use it. But it is not easy to say that we know how it works.
+A computer consists of CPU(s), RAM(s), Storage(s), Network device(s).
+CPUs are for calculation. For example, if you open up an MS Excel file and run some functions in it, then your file requests CPU resource to perform the task.</description>
+    </item>
     
     <item>
       <title>Why do I start this blog?</title>
