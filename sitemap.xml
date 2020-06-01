@@ -4,7 +4,52 @@
   
   <url>
     <loc>https://cloud.marcokwak.com/categories/</loc>
-    <lastmod>2020-04-26T20:05:50+08:00</lastmod>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/categories/homelab/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/tags/homelab/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/posts/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/series/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/series/set-up-your-own-vmware-homelab/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/tags/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/tags/vmware/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cloud.marcokwak.com/posts/what-do-you-need-for-your-own-homelab/</loc>
+    <lastmod>2020-05-01T18:55:05+08:00</lastmod>
   </url>
   
   <url>
@@ -24,26 +69,6 @@
   
   <url>
     <loc>https://cloud.marcokwak.com/series/hybrid-cloud-journey/</loc>
-    <lastmod>2020-04-26T20:05:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloud.marcokwak.com/</loc>
-    <lastmod>2020-04-26T20:05:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloud.marcokwak.com/posts/</loc>
-    <lastmod>2020-04-26T20:05:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloud.marcokwak.com/series/</loc>
-    <lastmod>2020-04-26T20:05:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://cloud.marcokwak.com/tags/</loc>
     <lastmod>2020-04-26T20:05:50+08:00</lastmod>
   </url>
   

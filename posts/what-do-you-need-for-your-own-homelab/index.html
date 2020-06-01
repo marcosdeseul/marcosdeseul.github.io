@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Marco Kwak">
+    <meta name="description" content="Marco&#39;s technical blog">
+    <meta name="keywords" content="blog,developer,se,solutions,engineer">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What Do You Need for Your Own Homelab?"/>
+<meta name="twitter:description" content="What is Homelab? I have used many public cloud services for a while. Since I started my career as a software engineer, AWS was already quite popular. Some old developer folks might not have chance to use public cloud services when landing on their first job, but I was lucky. So I used AWS in my first company. I have used AWS, GCP, Firebase for most of my careers.
+But I always wanted to have my own home data center, which is a homelab."/>
+
+    <meta property="og:title" content="What Do You Need for Your Own Homelab?" />
+<meta property="og:description" content="What is Homelab? I have used many public cloud services for a while. Since I started my career as a software engineer, AWS was already quite popular. Some old developer folks might not have chance to use public cloud services when landing on their first job, but I was lucky. So I used AWS in my first company. I have used AWS, GCP, Firebase for most of my careers.
+But I always wanted to have my own home data center, which is a homelab." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloud.marcokwak.com/posts/what-do-you-need-for-your-own-homelab/" />
+<meta property="article:published_time" content="2020-05-01T18:55:05+08:00" />
+<meta property="article:modified_time" content="2020-05-01T18:55:05+08:00" />
+
+
+
+    
+      <base href="https://cloud.marcokwak.com/posts/what-do-you-need-for-your-own-homelab/">
+    
+    <title>
+  What Do You Need for Your Own Homelab? · Marco Kwak
+</title>
+
+    
+      <link rel="canonical" href="https://cloud.marcokwak.com/posts/what-do-you-need-for-your-own-homelab/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/custom.css" />
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.69.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://cloud.marcokwak.com/">
+      Marco Kwak
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">What Do You Need for Your Own Homelab?</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-05-01T18:55:05&#43;08:00'>
+                May 1, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              5-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://cloud.marcokwak.com/categories/homelab/">Homelab</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://cloud.marcokwak.com/tags/vmware/">vmware</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/homelab/">homelab</a></div>
+
+          <div class="tags">
+  <i class="fas fa-list-alt"></i>
+    <a href="https://cloud.marcokwak.com/series/set-up-your-own-vmware-homelab/">Set Up Your Own VMware Homelab</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="what-is-homelab">What is Homelab?</h2>
+<p>I have used many public cloud services for a while. Since I started my career as a software engineer, AWS was already quite popular. Some old developer folks might not have chance to use public cloud services when landing on their first job, but I was lucky. So I used AWS in my first company. I have used AWS, GCP, Firebase for most of my careers.</p>
+<p>But I always wanted to have my own home data center, which is a <code>homelab</code>. Why? Because instances on public cloud services are already virtualized. I can easily rent some computing resources from cloud vendors, but you have no idea of what is happening behind the scene.</p>
+<p>I recently joined VMware. What is VMware? VMware is the biggest data center virtualization solution vendor. Before joining VMware, I didn&rsquo;t know what products VMware was selling precisely. But I knew the company had a promising vision of hybrid cloud. So I applied for a SE position in VMware and got an offer.</p>
+<p>In VMware, it is a paradise to set up a home lab. Many engineers already have experience of building up server clusters and there are good internal resources. Moreover, these knowledges are relevant to my work to support customers. Then why not?</p>
+<h2 id="how-is-a-home-server-different-from-an-enterprise-one">How is a home server different from an enterprise one?</h2>
+<p>A server computer is technically a computer. It also has CPU, memory, storage, and etc. But a server computer has more stuffs compared to a home desktop or a laptop. Server computers usually have multiple CPU sockets and more slots for memory and storage. And power suply is also redundant to prevent power failure. It is also very common that server computers have interactions with each other, so also they usually have multiple ethernet ports.</p>
+<p>But do you really need server computers for your own homelab? My answer is NO. If you really want to experience something like ones in a data center, then you should buy server computers for sure. But if you just want to try a similiar set-up at home and to understand the functionality, then you just can go with mini computers. Even with mini computers, you can try most of features of server computers, including setting up a cluster.</p>
+<h2 id="what-do-you-have-to-consider-before-buying-mini-computers-for-homelab">What do you have to consider before buying mini computers for homelab?</h2>
+<p>First of all, why do you want to have your own homelab setup? Is it to deploy your applications? Or do you want to have a hands-on experience with VMware products such as vSphere, vSAN, NSX? Do you want to set up a cluster of computers like ones in data centers? Do you want to improve your Linux operation skills?</p>
+<ul>
+<li>If you just want to know how VMware products work or to experience a server computer setup, then buying a mini computer might be an overkill. There are great virtualization solutions for desktop such as VMware Workstation and Fusion or Oracle Virtualbox. Even though your laptop or desktop should have enough computing resource to have a big enough cluster setup, it should be good enough using this solutions in most of cases.</li>
+<li>If you want to deploy several applications on your own server like on AWS, then purchase one and try first. If you just assume that operating your own server will be similar like running an EC2 on AWS, you will get disappointed. Once you get familiar with local servers, then you can buy more machines and set up a cluster.</li>
+</ul>
+<p>Secondly, CPU, memory, storage do not come with server computers. When you buy a laptop or a desktop, it usually comes with a full setup including OS installed. But when you buy a server, you usually have to buy memory, storage on top of your servers. If you haven’t check the price of memory and storage before purchasing a server computer, then the final cost can be a snowball. Moreover, if you want to virtualize your servers with VMware products, then you also should check the hardware compatibility. One of popular products from VMware, vSphere has a wide range of compatible hardware list but there are also many models without compatibility from local server vendors.</p>
+<p>Lastly, noise and power consumption are also factors to consider. Normal server computers are very noisy due to fan and consuming a lot of energy to run heavy computing resources. Server computers are meant to run 24/7 without pausing or turning off, not like your laptop. If your server computers are not electricity efficient, then you will receive a surprising utility bill. In terms of noise, there are even fan-less computers these days. If you are planning to put server computers at home, you won’t want them to bother your sleep at night.</p>
+<h2 id="what-mini-computers-do-i-recommend-for-your-own-homelab">What mini computers do I recommend for your own homelab?</h2>
+<p>I would like to recommend these two models below for those who want to set up their own lab for the first time. These two platforms are already very popular amongh the VMware community, so it is easy to get some help.</p>
+<ul>
+<li>Intel NUC - <a href="https://www.intel.sg/content/www/xa/en/products/boards-kits/nuc/kits/nuc10i7fnhc.html">link</a></li>
+<li>Supermicro - <a href="https://www.supermicro.com/en/products/system/Mini-ITX/SYS-E300-9D-8CN8TP.cfm">link</a></li>
+</ul>
+<h3 id="intel-nuc">Intel NUC</h3>
+<p>If you are planning to buy only one mini computer for homelab, then I highly recommend Intel NUC. It is compact and very quiet. Intel NUC 10 generation i7 model has a 6-core CPU, so more powerful. And Intel is one of the most well-know hardware vendor, so it is quite easy to find one Intel NUC box in most of countries.</p>
+<h3 id="supermicro">Supermicro</h3>
+<p>If you want to set up a cluster of more than 3 servers, then Supermicro will be a better option. It is because Supermicro has 2 x 1 Gbps ethernet ports and 2 x 10 Gbps ethernet ports. It is quite essential to have a good network connectivity in a cluster to test vMotion, vSAN, NSX, etc. But Intel NUC only has one 1 Gbps ethernet port, even though you can use a &ldquo;usb-c to ethernet adapter&rdquo;, but it&rsquo;s quite limited natively. But Supermicro servers are noisier because it was designed as a mini server, so you may want to consider a seperate place or a server rack to put Supermicro machines in.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "marcokwak" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Passionate about Business and Technologies</p>
+      
+      
+        ©
+        
+        2020
+         Marco Kwak 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+  </body>
+
+</html>

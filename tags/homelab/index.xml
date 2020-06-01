@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>homelab on Marco Kwak</title>
+    <link>https://cloud.marcokwak.com/tags/homelab/</link>
+    <description>Recent content in homelab on Marco Kwak</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2020 18:55:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://cloud.marcokwak.com/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What Do You Need for Your Own Homelab?</title>
+      <link>https://cloud.marcokwak.com/posts/what-do-you-need-for-your-own-homelab/</link>
+      <pubDate>Fri, 01 May 2020 18:55:05 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/posts/what-do-you-need-for-your-own-homelab/</guid>
+      <description>What is Homelab? I have used many public cloud services for a while. Since I started my career as a software engineer, AWS was already quite popular. Some old developer folks might not have chance to use public cloud services when landing on their first job, but I was lucky. So I used AWS in my first company. I have used AWS, GCP, Firebase for most of my careers.
+But I always wanted to have my own home data center, which is a homelab.</description>
+    </item>
+    
+  </channel>
+</rss>

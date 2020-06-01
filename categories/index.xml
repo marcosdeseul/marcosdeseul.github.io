@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Apr 2020 20:05:50 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 18:55:05 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Homelab</title>
+      <link>https://cloud.marcokwak.com/categories/homelab/</link>
+      <pubDate>Fri, 01 May 2020 18:55:05 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/categories/homelab/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cloud</title>
