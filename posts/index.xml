@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2020 18:55:05 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 May 2020 19:15:05 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vSphere Edition Comparison</title>
+      <link>https://cloud.marcokwak.com/posts/vmware-products-vsphere-edition/</link>
+      <pubDate>Sat, 02 May 2020 19:15:05 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/posts/vmware-products-vsphere-edition/</guid>
+      <description>What is vSphere? I believe that you already know what vSphere is if you visit this post. Since VMware vSphere is the most popular server virtualization product, so if you are in the IT infrastructure industry, you must have heard of vSphere once at leat. But just in case someone visits this blog to learn about VMware and its products, I would like to describe what vSphere is.
+Before talking about what vSphere is, we need to know what a hypervisor is.</description>
+    </item>
     
     <item>
       <title>What Do You Need for Your Own Homelab?</title>

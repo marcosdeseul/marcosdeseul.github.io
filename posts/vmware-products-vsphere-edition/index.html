@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Marco Kwak">
+    <meta name="description" content="Marco&#39;s technical blog">
+    <meta name="keywords" content="blog,developer,se,solutions,engineer">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vSphere Edition Comparison"/>
+<meta name="twitter:description" content="What is vSphere? I believe that you already know what vSphere is if you visit this post. Since VMware vSphere is the most popular server virtualization product, so if you are in the IT infrastructure industry, you must have heard of vSphere once at leat. But just in case someone visits this blog to learn about VMware and its products, I would like to describe what vSphere is.
+Before talking about what vSphere is, we need to know what a hypervisor is."/>
+
+    <meta property="og:title" content="vSphere Edition Comparison" />
+<meta property="og:description" content="What is vSphere? I believe that you already know what vSphere is if you visit this post. Since VMware vSphere is the most popular server virtualization product, so if you are in the IT infrastructure industry, you must have heard of vSphere once at leat. But just in case someone visits this blog to learn about VMware and its products, I would like to describe what vSphere is.
+Before talking about what vSphere is, we need to know what a hypervisor is." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloud.marcokwak.com/posts/vmware-products-vsphere-edition/" />
+<meta property="article:published_time" content="2020-05-02T19:15:05+08:00" />
+<meta property="article:modified_time" content="2020-05-02T19:15:05+08:00" />
+
+
+
+    
+      <base href="https://cloud.marcokwak.com/posts/vmware-products-vsphere-edition/">
+    
+    <title>
+  vSphere Edition Comparison · Marco Kwak
+</title>
+
+    
+      <link rel="canonical" href="https://cloud.marcokwak.com/posts/vmware-products-vsphere-edition/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/custom.css" />
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.69.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://cloud.marcokwak.com/">
+      Marco Kwak
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">vSphere Edition Comparison</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-05-02T19:15:05&#43;08:00'>
+                May 2, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://cloud.marcokwak.com/categories/vmware-product/">VMware Product</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://cloud.marcokwak.com/tags/vmware/">vmware</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/vsphere/">vsphere</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/esxi/">esxi</a></div>
+
+          <div class="tags">
+  <i class="fas fa-list-alt"></i>
+    <a href="https://cloud.marcokwak.com/series/vmware-product-edition/">VMware Product Edition</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="what-is-vsphere">What is vSphere?</h2>
+<p>I believe that you already know what vSphere is if you visit this post. Since <code>VMware vSphere</code> is <strong>the most popular server virtualization product</strong>, so if you are in the IT infrastructure industry, you must have heard of vSphere once at leat. But just in case someone visits this blog to learn about VMware and its products, I would like to describe what vSphere is.</p>
+<p>Before talking about what vSphere is, we need to know what a hypervisor is. A <code>hypervisor</code> is a software that helps to run virtual machines. What is a virtual machine? A <code>virtual machine</code> is a virtual computer in a physical computer like your laptop or desktop. Virtual machines are used to fully utilize computing resources such as CPU, memory.</p>
+<p>A server is technically a computer. Corporates have many server computers at their data center. But when they use them, most of computing resources are usually not utilized. But servers are super expensive. People wanted to find better ways to maximize the utilization and the outcome was the advent of hypervisor.</p>
+<p>vSphere is a package of products like Office 365, which includes ESXi the VMware Hypervisor. But when many people speak of vSphere, it usually refers to ESXi, so it can be quite confusing. Technically speaking, vSphere includes ESXi, vCenter, vSphere Client, etc.</p>
+<h2 id="what-editions-does-vsphere-include">What editions does vSphere include?</h2>
+<h3 id="vsphere-standard-vs-vsphere-enterprise-plus">vSphere Standard vs vSphere Enterprise Plus</h3>
+<p><em>The summary of vSphere editions is based on <a href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/vsphere/vmware-vsphere-pricing-whitepaper.pdf">this VMware offical documentation</a>. If you need more info, please click the link and find more.</em></p>
+<p>There are two main editions of vSphere: <code>vSphere Standard</code> and <code>vSphere Enterprise Plus</code>. Let me list up features before explaining what they are.</p>
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th align="center">vSphere Standard</th>
+<th align="center">vSphere Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">vMotion</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vCenter Hybrid Linked Mode</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">High Availability (HA)</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Fault Tolerance* (FT)</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Per-VM Enhanced vMotion Compatibility</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Content Library</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vSphere Virtual Volumes</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">VM encryption</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vSphere Distributed Switch</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Host Profile and vSphere Auto Deploy</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vSphere Distributed Resource Scheduler (DRS)</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vSphere Storage DRS</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">NVIDIA GRID vGPU</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Single root I/O virtualization (SR-IOV)</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vSphere Network I/O Control and vSphere Storage I/O Control</td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Fault Tolerance
+<ul>
+<li>vSphere Standard allows 2-vCPU VMs FT</li>
+<li>vSphere Enterprise allows 8-vCPU VMs FT</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Let me briefly introduce main features here:</p>
+<ul>
+<li><strong>vMotion</strong>: It is a technology to migrate VMs from one host to another host.</li>
+<li><strong>High Availability</strong>: When there is a host failure, VMs are restarted on another host.</li>
+<li><strong>Fault Toelerance</strong>: When there is a host failure, VMs on the hosts are switched to secondary VMs on live hosts without downtime.</li>
+<li><strong>Distributed Resource Scheduler</strong>: When a host experiences shortage of computing resources, this feature migrate VMs to other hosts with enough resources.</li>
+</ul>
+<p>After comparing two editions, you can say that <code>vSphere Standard</code> is more focusing on consolidating computing resources and <code>vSphere Enterprise Plus</code> is more for a bigger cluster management. vSphere Distributed Switch, Host Profile, vSphere Auto Deploy and DRS are all great features for cluster management.</p>
+<h3 id="vsphere-essentials-kit">vSphere Essentials Kit</h3>
+<p>What if you have only a few nodes, but you still want to try vSphere with a minimum investment? Then you may want to consider <code>vSphere Essentials Kit</code>. It comes with a license supporting up to three hosts with up to two CPUs each and a vCenter server.</p>
+<p>It is a minimal setup for small environments, so it does not include many features. But <code>vSphere Essentials Plus</code> (not <code>vSphere Essentials</code>) includes vMotion and HA.</p>
+<h3 id="vsphere-desktop">vSphere Desktop</h3>
+<p>Are you looking for a VDI solution to allow your employees to work remotely efficiently by? VMware has Horizon to address your need. But if you have to set up a data center from scratch for VDI, then from hardwares, softwares to guest OSs, it may cost a lot.</p>
+<p>VMware provides <code>vSphere Desktop</code> License which is included in Horizon licenses. So if you are using your infrastructure only for VDI, then you do not need to buy extra vSphere licenses. By default, it has <code>vSphere Enterprise Plus</code>.</p>
+<p>But if you still want to run some VMs with virtual desktops, then you may want to know Horizon add-ons licenses which help you to run virtual desktops on your existing vSphere environment.</p>
+<h2 id="pricing">Pricing?</h2>
+<p>You may want to ask me how much these editions are. But the final price can be different depending on the volume of purchase and some factor. Please talk to your VMware sales or partner.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "marcokwak" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Passionate about Business and Technologies</p>
+      
+      
+        ©
+        
+        2020
+         Marco Kwak 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+  </body>
+
+</html>
