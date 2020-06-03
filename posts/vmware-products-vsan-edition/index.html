@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Marco Kwak">
+    <meta name="description" content="Marco&#39;s technical blog">
+    <meta name="keywords" content="blog,developer,se,solutions,engineer">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="vSAN Edition Comparison"/>
+<meta name="twitter:description" content="What is vSAN? Have you heard of HCI, Hyper Converged Infrastructure? It&rsquo;s been a while since I joined VMware. I still feel that the term HCI is too fancy and not very intuitive. But it is not a fault of VMware because VMware is not the one who invented the term.
+Hyper Converged Infrastructure usually means server computers with internal shared storages. What? When we use a laptop or a desktop, it usually comes with storage inside, isn&rsquo;t it?"/>
+
+    <meta property="og:title" content="vSAN Edition Comparison" />
+<meta property="og:description" content="What is vSAN? Have you heard of HCI, Hyper Converged Infrastructure? It&rsquo;s been a while since I joined VMware. I still feel that the term HCI is too fancy and not very intuitive. But it is not a fault of VMware because VMware is not the one who invented the term.
+Hyper Converged Infrastructure usually means server computers with internal shared storages. What? When we use a laptop or a desktop, it usually comes with storage inside, isn&rsquo;t it?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloud.marcokwak.com/posts/vmware-products-vsan-edition/" />
+<meta property="article:published_time" content="2020-05-05T20:02:01+08:00" />
+<meta property="article:modified_time" content="2020-05-05T20:02:01+08:00" />
+
+
+
+    
+      <base href="https://cloud.marcokwak.com/posts/vmware-products-vsan-edition/">
+    
+    <title>
+  vSAN Edition Comparison · Marco Kwak
+</title>
+
+    
+      <link rel="canonical" href="https://cloud.marcokwak.com/posts/vmware-products-vsan-edition/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/custom.css" />
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.69.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://cloud.marcokwak.com/">
+      Marco Kwak
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">vSAN Edition Comparison</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-05-05T20:02:01&#43;08:00'>
+                May 5, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://cloud.marcokwak.com/categories/vmware-product/">VMware Product</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://cloud.marcokwak.com/tags/vmware/">vmware</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/vsan/">vsan</a></div>
+
+          <div class="tags">
+  <i class="fas fa-list-alt"></i>
+    <a href="https://cloud.marcokwak.com/series/vmware-product-edition/">VMware Product Edition</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="what-is-vsan">What is vSAN?</h2>
+<p>Have you heard of <code>HCI, Hyper Converged Infrastructure</code>? It&rsquo;s been a while since I joined VMware. I still feel that the term HCI is too fancy and not very intuitive. But it is not a fault of VMware because VMware is not the one who invented the term.</p>
+<p><code>Hyper Converged Infrastructure</code> usually means server computers with internal shared storages. What? When we use a laptop or a desktop, it usually comes with storage inside, isn&rsquo;t it?</p>
+<p>But it is not necessarily like this in the server computer world. At the beginning of server computer era, it was like that. But imagine that hundreds or thousands of server computers. Each computer has its own storage but the usage of storage can vary depending on the service running on the server.</p>
+<p>So what did IT administrators do to solve this issue? They moved internal storages into an external storage rack. Then they put a storage switch to connect the external storage rack and servers like storages are sitting in each server. But this approach also faced issues soon. The external storage racks grew very fast while external storages were more expensive than internal ones. And to maintain external storages, IT teams needed more manpower to configure storage racks and storage network devices.</p>
+<p>vSAN, VMware HCI solution, was invented to put external storages back into servers, but still to keep them connected. vCenter manages vSAN clusters. It connects servers with internal storages so that end users can use them like there is only one shared storage.</p>
+<h2 id="what-editions-does-vsan-70-include">What editions does vSAN 7.0 include?</h2>
+<h3 id="what-is-all-flash-configuration">what is All-Flash configuration?</h3>
+<p>Going through the edition comparision table and annotations below, you will see a term &ldquo;All-Flash&rdquo; for a couple of times. For your better understanding of vSAN editions, let me explain first what is it.</p>
+<p>There are two types of storage, Solid State Drive(SSD) and Hard Disk Drive(HDD). SSD is much faster than HDD, but also much more expensive. All-Flash means all-SSD-storage setup.</p>
+<p>vSAN has two tiers of storage, one is the capacity tier and the other is the cache tier. The cache tier stores read data temporarily to improve IOPS performance. Hybrid configuration means setting up HDD for the cache tier and SSD for the capacity tier. All-Flash means SSD for the cache and capacity tier.</p>
+<h3 id="vsan-standard-vs-advanced-vs-enterprise-vs-enterprise-plus">vSAN Standard vs Advanced vs Enterprise vs Enterprise Plus</h3>
+<p><em>The summary of vSAN editions is based on <a href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/vsan/vmware-vsan-licensing-guide.pdf">this VMware offical documentation</a>. If you need more info, please click the link and find more.</em></p>
+<table>
+<thead>
+<tr>
+<th align="right">vSAN Features</th>
+<th align="center">Standard</th>
+<th align="center">Advanced</th>
+<th align="center">Enterprise</th>
+<th align="center">Enterprise Plus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Storage Policy Based Mgmt</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Virtual Distributed Switch</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Rack Awareness</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">All-Flash Hardware</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">iSCS Target Service</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Qos - IOPS Limit</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Deduplication &amp; Compression*</td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">RAID-5/6 Erasure Coding*</td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vRealize Operations within vCenter</td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Data-at-Rest Encryption</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Stretched Cluster with Local Failure Protection</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">File Services</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vROps 8 Advanced Features*</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Deduplication &amp; Compression / RAID-5/6 Erasure Coding
+<ul>
+<li>require an all-flash vSAN configuration</li>
+</ul>
+</li>
+<li>vROps 8 Advanced Features
+<ul>
+<li>vSAN-aware WLB</li>
+<li>Customizable Dashboards</li>
+<li>Auto Remediation</li>
+<li>Troubleshooting Workflows</li>
+<li>Automated Intent-Based Workload</li>
+<li>Capacity Planning</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Let me explain some key features here:</p>
+<ul>
+<li><strong>Storage Policy Based Mgmt</strong>: You can set up a policy of storage. When launching a new VM, you can choose one policy so that all VMs under the policy follow the same storage setup.</li>
+<li><strong>Rack Awareness</strong>: vSAN protects data by duplicating data and distributing duplicated data into different hosts. What if the power of server rack is down? If all duplicated data sits in servers of one rack, then you lose all data. So it is important vSAN awares of rack setup.</li>
+<li><strong>Stretched Cluster</strong>: vSAN is used to connect servers with internal storages. Then can we connect servers in different two data centers? Yes, you can fulfill this requirement by vSAN Stretched Cluster.</li>
+</ul>
+<p>In summary, <code>vSAN Advanced</code> has more effiency-related features like deduplication &amp; compression, RAID-5/6 erasure coding. If you are planning to connect two data centers with storages connected, then you may want to consider <code>vSAN Enterprise</code>. <code>vSAN Enterprise Plus</code> has the same list of vSAN Enterprise features, but it comes with vROps 8 Advanced features. But you only can purchse this bundle per CPU.</p>
+<h2 id="pricing">Pricing?</h2>
+<p>You may want to ask me how much these editions are. But the final price can be different depending on the volume of purchase and some factor. Please talk to your VMware sales or partner.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+      <h3>See also in VMware Product Edition</h3>
+      <nav>
+        <ul>
+        
+        
+          
+        
+          
+            <li>
+              <a href="https://cloud.marcokwak.com/posts/vmware-products-vsphere-edition/">vSphere Edition Comparison</a>
+            </li>
+          
+        
+        </ul>
+      </nav>
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "marcokwak" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Passionate about Business and Technologies</p>
+      
+      
+        ©
+        
+        2020
+         Marco Kwak 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+  </body>
+
+</html>

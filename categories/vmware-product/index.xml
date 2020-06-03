@@ -6,10 +6,20 @@
     <description>Recent content in VMware Product on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 May 2020 19:15:05 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 20:02:01 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/categories/vmware-product/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vSAN Edition Comparison</title>
+      <link>https://cloud.marcokwak.com/posts/vmware-products-vsan-edition/</link>
+      <pubDate>Tue, 05 May 2020 20:02:01 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/posts/vmware-products-vsan-edition/</guid>
+      <description>What is vSAN? Have you heard of HCI, Hyper Converged Infrastructure? It&amp;rsquo;s been a while since I joined VMware. I still feel that the term HCI is too fancy and not very intuitive. But it is not a fault of VMware because VMware is not the one who invented the term.
+Hyper Converged Infrastructure usually means server computers with internal shared storages. What? When we use a laptop or a desktop, it usually comes with storage inside, isn&amp;rsquo;t it?</description>
+    </item>
     
     <item>
       <title>vSphere Edition Comparison</title>
