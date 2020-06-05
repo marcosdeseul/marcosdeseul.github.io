@@ -6,15 +6,24 @@
     <description>Recent content in Categories on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2020 20:02:01 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 19:28:45 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>DevOps</title>
+      <link>https://cloud.marcokwak.com/categories/devops/</link>
+      <pubDate>Sat, 30 May 2020 19:28:45 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>VMware Product</title>
       <link>https://cloud.marcokwak.com/categories/vmware-product/</link>
-      <pubDate>Tue, 05 May 2020 20:02:01 +0800</pubDate>
+      <pubDate>Fri, 08 May 2020 20:17:44 +0800</pubDate>
       
       <guid>https://cloud.marcokwak.com/categories/vmware-product/</guid>
       <description></description>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Marco Kwak">
+    <meta name="description" content="Marco&#39;s technical blog">
+    <meta name="keywords" content="blog,developer,se,solutions,engineer">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NSX Data Center Edition Comparison"/>
+<meta name="twitter:description" content="What is NSX Data Center? You always use Network to access to the Internet. If you didn&rsquo;t go to a place without Internet connection like an island, you are technically living with Networks; Wifi, mobile cellular data, routers to provide wifi at home, etc.
+But I had not thought of Network as a computing resource before joining VMware. Even my previous company was one of wireless network hardware vendor, Ruckus Network, but my exposure to Networking was limited."/>
+
+    <meta property="og:title" content="NSX Data Center Edition Comparison" />
+<meta property="og:description" content="What is NSX Data Center? You always use Network to access to the Internet. If you didn&rsquo;t go to a place without Internet connection like an island, you are technically living with Networks; Wifi, mobile cellular data, routers to provide wifi at home, etc.
+But I had not thought of Network as a computing resource before joining VMware. Even my previous company was one of wireless network hardware vendor, Ruckus Network, but my exposure to Networking was limited." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cloud.marcokwak.com/posts/vmware-products-nsx-edition/" />
+<meta property="article:published_time" content="2020-05-08T20:17:44+08:00" />
+<meta property="article:modified_time" content="2020-05-08T20:17:44+08:00" />
+
+
+
+    
+      <base href="https://cloud.marcokwak.com/posts/vmware-products-nsx-edition/">
+    
+    <title>
+  NSX Data Center Edition Comparison · Marco Kwak
+</title>
+
+    
+      <link rel="canonical" href="https://cloud.marcokwak.com/posts/vmware-products-nsx-edition/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+
+    
+      <link rel="stylesheet" href="https://cloud.marcokwak.com/css/custom.css" />
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://cloud.marcokwak.com/img/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.69.0" />
+  </head>
+
+  
+  
+  <body class="colorscheme-light">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://cloud.marcokwak.com/">
+      Marco Kwak
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/posts/">Blog</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://cloud.marcokwak.com/about/">About</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">NSX Data Center Edition Comparison</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-05-08T20:17:44&#43;08:00'>
+                May 8, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://cloud.marcokwak.com/categories/vmware-product/">VMware Product</a></div>
+
+          <div class="tags">
+  <i class="fas fa-tag"></i>
+    <a href="https://cloud.marcokwak.com/tags/vmware/">vmware</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/nsx/">nsx</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/nsx-v/">nsx-v</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/nsx-t/">nsx-t</a>
+      <span class="separator">•</span>
+    <a href="https://cloud.marcokwak.com/tags/nsx-dc/">nsx-dc</a></div>
+
+          <div class="tags">
+  <i class="fas fa-list-alt"></i>
+    <a href="https://cloud.marcokwak.com/series/vmware-product-edition/">VMware Product Edition</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="what-is-nsx-data-center">What is NSX Data Center?</h2>
+<p>You always use Network to access to the Internet. If you didn&rsquo;t go to a place without Internet connection like an island, you are technically living with Networks; Wifi, mobile cellular data, routers to provide wifi at home, etc.</p>
+<p>But I had not thought of Network as a computing resource before joining VMware. Even my previous company was one of wireless network hardware vendor, Ruckus Network, but my exposure to Networking was limited. But after joining VMware, I can truely understand why Networking is very important and how they work.</p>
+<p>Networking is important for individuals&rsquo; life but more important for data centers and cloud services. So networking experts are in high demands in the cloud industry. It is because server computers are connected, so that applications running on different servers can interact with each other.</p>
+<p>But fulfilling all networking requirements is never easy. You have to understand how to set up physical networking devices and how networking features work such as <strong>routing, switching, firewall, VPN, load balancing, etc</strong>. And you also need to understand all Networking concepts and commands on the OS level and how to manage them in multiple networking layers. The complexity is not comparable to fixing your home wifi router.</p>
+<p>That&rsquo;s why <code>NSX</code> was invented. Setting up networking across servers is extremely complex, so NSX, network virtualization solution, helps engineers to configure their data centers&rsquo; network in a proper and efficent way.</p>
+<h2 id="nsx-v-nsx-t-nsx-data-center">NSX-V? NSX-T? NSX Data Center?</h2>
+<p>If you have heard of NSX, then you may have heard of <code>NSX-V</code> and <code>NSX-T</code>. And we have <code>NSX Data Center</code> here. <code>NSX-V</code> is <strong>NSX for vSphere</strong>, so the architecture of NSX-V is only focused on vSphere. But <code>NSX-T</code> covers a wider range of OS. It covers not only vSphere, but KVM and bare-metal. <code>NSX Data Center (NSX-DC)</code> include both of NSX-V and NSX-T. <code>VMware Cloud Foundation (VCF)</code> allows customers to deploy both NSX-V and NSX-T. I think this is why the new name <code>NSX-DC</code> was made.</p>
+<h2 id="what-editions-does-nsx-data-center-include">What editions does NSX Data Center include?</h2>
+<h3 id="nsx-data-center-standard-vs-professional-vs-advanced-vs-enterprise-plus">NSX Data Center Standard vs Professional vs Advanced vs Enterprise Plus</h3>
+<p><em>The summary of NSX-T Data Center editions is based on <a href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/products/nsx/vmware-nsx-datasheet.pdf">this VMware offical documentation</a>. If you need more info, please click the link and find more.</em></p>
+<table>
+<thead>
+<tr>
+<th align="right">NSX Features</th>
+<th align="center">Standard</th>
+<th align="center">Professional</th>
+<th align="center">Advanced</th>
+<th align="center">Enterprise Plus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">Distributed Switching and Routing</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">NSX Gateway Firewall (Stateful)</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">NSX Gateway NAT</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Software L2 Bridging to Physical Environments</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Distributed Firewalling for VMs and Workloads Running on Bare Metal</td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">VPN (L2 and L3)</td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Integration with NSX Cloud* for AWS and Azure Support</td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Load Balancing</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Container Networking and Security</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Multi-vCenter® Networking and Security</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">IPv6 with Dynamic Routing, Dynamic IPv6 Allocation and Services</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Context-Aware Micro-Segmentation (L7 Application Identification, RDSH, Protocol Analyzer)</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">NSX Distributed IDS/IPS1</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Federation</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">VM-to-VM Traffic Flow Analysis</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Firewall Visibility</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">Automated Security Policy</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">vRealize Network Insight Advanced</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+<tr>
+<td align="right">VMware HCX Advanced</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">O</td>
+</tr>
+</tbody>
+</table>
+<p><em>For detailed feature capabilities, please refer to the knowledge base articles on NSX Data Center features including the <a href="https://kb.vmware.com/s/article/78223">Product Offerings for NSX-T Data Center 3.0</a>.</em></p>
+<hr>
+<p>Let me explain some key features here:</p>
+<ul>
+<li><strong>Load Balancing</strong>: Distribute network traffic into multiple VMs so that applications only receives bearable amount of traffic.</li>
+<li><strong>Federation</strong>: Centralized policy configuration and enforcement across multiple locations from a single pane of glass.</li>
+</ul>
+<p>In summary, <code>NSX Standard</code> includes basic networking features; switching, routing, gateway firewall, gateway NAT. <code>NSX Professional</code> includes micro-segmentation and VPN on top of NSX Standard. <code>NSX Advanced</code> has more features for bigger and/or multiple sites; load balancing, multi-vCenter networking and security, context-aware micro-segmentation. It also supports container networking and security. <code>NSX Enterprise Plus</code>, the big boss, supports Federation and has VM-to-VM traffic analysis. It also comes with vRealize Network Insight Advanced and VMware HCX Advanced.</p>
+<h2 id="pricing">Pricing?</h2>
+<p>You may want to ask me how much these editions are. But the final price can be different depending on the volume of purchase and some factor. Please talk to your VMware sales or partner.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+<section class="see-also">
+  
+    
+    
+    
+      <h3>See also in VMware Product Edition</h3>
+      <nav>
+        <ul>
+        
+        
+          
+        
+          
+            <li>
+              <a href="https://cloud.marcokwak.com/posts/vmware-products-vsan-edition/">vSAN Edition Comparison</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://cloud.marcokwak.com/posts/vmware-products-vsphere-edition/">vSphere Edition Comparison</a>
+            </li>
+          
+        
+        </ul>
+      </nav>
+    
+  
+</section>
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "marcokwak" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'], ['\\(', '\\)']
+        ],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>Passionate about Business and Technologies</p>
+      
+      
+        ©
+        
+        2020
+         Marco Kwak 
+      
+      
+      
+    </section>
+  </footer>
+
+    </main>
+
+    
+
+    
+
+  </body>
+
+</html>

@@ -6,10 +6,20 @@
     <description>Recent content in VMware Product Edition on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 May 2020 20:02:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2020 20:17:44 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/series/vmware-product-edition/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>NSX Data Center Edition Comparison</title>
+      <link>https://cloud.marcokwak.com/posts/vmware-products-nsx-edition/</link>
+      <pubDate>Fri, 08 May 2020 20:17:44 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/posts/vmware-products-nsx-edition/</guid>
+      <description>What is NSX Data Center? You always use Network to access to the Internet. If you didn&amp;rsquo;t go to a place without Internet connection like an island, you are technically living with Networks; Wifi, mobile cellular data, routers to provide wifi at home, etc.
+But I had not thought of Network as a computing resource before joining VMware. Even my previous company was one of wireless network hardware vendor, Ruckus Network, but my exposure to Networking was limited.</description>
+    </item>
     
     <item>
       <title>vSAN Edition Comparison</title>
