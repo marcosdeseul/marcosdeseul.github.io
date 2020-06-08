@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DevOps on Marco Kwak</title>
-    <link>https://cloud.marcokwak.com/categories/devops/</link>
-    <description>Recent content in DevOps on Marco Kwak</description>
+    <title>k8s on Marco Kwak</title>
+    <link>https://cloud.marcokwak.com/tags/k8s/</link>
+    <description>Recent content in k8s on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Jun 2020 19:28:45 +0800</lastBuildDate>
     
-	<atom:link href="https://cloud.marcokwak.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cloud.marcokwak.com/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

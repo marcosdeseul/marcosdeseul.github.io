@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2020 19:28:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 19:28:45 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>certificate</title>
       <link>https://cloud.marcokwak.com/tags/certificate/</link>
-      <pubDate>Sat, 30 May 2020 19:28:45 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
       
       <guid>https://cloud.marcokwak.com/tags/certificate/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>cka</title>
       <link>https://cloud.marcokwak.com/tags/cka/</link>
-      <pubDate>Sat, 30 May 2020 19:28:45 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
       
       <guid>https://cloud.marcokwak.com/tags/cka/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>ckad</title>
       <link>https://cloud.marcokwak.com/tags/ckad/</link>
-      <pubDate>Sat, 30 May 2020 19:28:45 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
       
       <guid>https://cloud.marcokwak.com/tags/ckad/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>devops</title>
       <link>https://cloud.marcokwak.com/tags/devops/</link>
-      <pubDate>Sat, 30 May 2020 19:28:45 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
       
       <guid>https://cloud.marcokwak.com/tags/devops/</guid>
       <description></description>
@@ -50,9 +50,27 @@
     <item>
       <title>exam</title>
       <link>https://cloud.marcokwak.com/tags/exam/</link>
-      <pubDate>Sat, 30 May 2020 19:28:45 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
       
       <guid>https://cloud.marcokwak.com/tags/exam/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>https://cloud.marcokwak.com/tags/k8s/</link>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://cloud.marcokwak.com/tags/kubernetes/</link>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
+      
+      <guid>https://cloud.marcokwak.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     

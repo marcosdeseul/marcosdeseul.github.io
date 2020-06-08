@@ -6,7 +6,7 @@
     <description>Recent content in devops on Marco Kwak</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2020 19:28:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2020 19:28:45 +0800</lastBuildDate>
     
 	<atom:link href="https://cloud.marcokwak.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,10 +14,10 @@
     <item>
       <title>How to Prepare CKA and CKAD</title>
       <link>https://cloud.marcokwak.com/posts/how-to-prepare-cka-and-ckad/</link>
-      <pubDate>Sat, 30 May 2020 19:28:45 +0800</pubDate>
+      <pubDate>Fri, 05 Jun 2020 19:28:45 +0800</pubDate>
       
       <guid>https://cloud.marcokwak.com/posts/how-to-prepare-cka-and-ckad/</guid>
-      <description></description>
+      <description>What is Kubernetes? When I first learned programming, it was not very difficult to build an application. There were a lot of useful resources to use for application development. (Developers like sharing.) If you have chosen right courses, then it took a couple of weeks to build what you wanted. But a real problem was deployment. You can learn programming on your laptop, but it was not easy learn application deployment and maintanance on your machine.</description>
     </item>
     
   </channel>
